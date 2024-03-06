@@ -1,12 +1,13 @@
 import React from 'react';
-import './menuAdministrador.css'; 
+import './menuCoordinador.css';
 import logo from '../../images/logoquito.png';
 import { useNavigate } from 'react-router-dom';
 
-function MenuAdministrador({ onMenuClick }) {
+function MenuCoordinador({ onMenuClick }) {
   const handleItemClick = (opcion) => {
     onMenuClick(opcion);
-  };
+    
+  }; 
   const  navigate = useNavigate();
 
   const logout = () => {
@@ -22,17 +23,17 @@ function MenuAdministrador({ onMenuClick }) {
                     <img src={logo} alt="" />
                 </div>
           {/* ... (tu contenido actual) */}
-          <div className="acceso__menu" onClick={() => handleItemClick('todosUsuarios')}>
-            Usuarios Pendientes
+          <div className="acceso__menu" onClick={() => handleItemClick('Creacion')}>
+            Creacion de Rutas
           </div>
-          <div className="acceso__menu" onClick={() => handleItemClick('UsuariosAceptados')}>
-          Usuarios Aceptados
+          <div className="acceso__menu" onClick={() => handleItemClick('Asignacion')}>
+            Asignacion de Rutas
           </div>
-          <div className="acceso__menu" onClick={() => handleItemClick('UsuariosRechazados')}>
-            Usuarios Rechazados
+          <div className="acceso__menu" onClick={() => handleItemClick('Asistencias')}>
+            Asistencias
           </div>
-          <div className="acceso__menu" onClick={() => handleItemClick('UsuariosCoordinadores')}>
-            Coordinadores 
+          <div className="acceso__menu" onClick={logout}>
+            Cerrar Session
           </div>
           <div className="acceso__menu" onClick={logout}>
             Cerrar Session
@@ -45,4 +46,4 @@ function MenuAdministrador({ onMenuClick }) {
   );
 }
 
-export default MenuAdministrador;
+export default MenuCoordinador;

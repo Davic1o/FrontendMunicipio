@@ -36,7 +36,10 @@ function Login() {
       navigate('/Usuario');
       console.log('Redireccionando...');
     } 
-
+    else {
+      // No se encontró al usuario
+      alert('Usuario o contraseña incorrectos');
+    }
   };
 
   return (

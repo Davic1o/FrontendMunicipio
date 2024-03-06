@@ -5,17 +5,15 @@ import MenuCoordinador from '../../components/MenuCoordinador/MenuCoordinador';
 import Asistencias from '../../components/Asistencias/Asistencias';
 import Asignacion from '../../components/Asignacion/Asignacion';
 import CreacionRutas from '../../components/Creacion/CreacionRutas';
-import UserApi from '../../api/UserApi';
-import ListarSectoresApi from '../../api/ListarSectoresApi';
 
 function Coordinador() {
-  const navigate = useNavigate();
+    const navigate = useNavigate();
+
+    const [userData, setUserData] = useState(null);
   
-  const [userData, setUserData] = useState(null);
-  
-  useEffect(() => {
-    // Recuperar la información del localStorage
-    const storedUser = localStorage.getItem('currentUser');
+    useEffect(() => {
+      // Recuperar la información del localStorage
+      const storedUser = localStorage.getItem('currentUser');
   
       // Parsear la información si existe
       if (storedUser) {
@@ -29,12 +27,9 @@ function Coordinador() {
         navigate('/');
       }
     }, [navigate]);
-    
-    const datosUsuarios = UserApi().apiData;
-    const datosSectores =ListarSectoresApi();
-    const usuarios = datosUsuarios.filter((usuario) => usuario.tipo === 'Usuario' && usuario.aprobar === true);
-    const sectores = datosSectores.filter((sector)=> sector.id_Zona === userData?.zona)
-    
+  
+
+
     const [opcionSeleccionada, setOpcionSeleccionada] = useState(null);
 
     const handleMenuClick = (opcion) => {
@@ -48,11 +43,11 @@ function Coordinador() {
                     <MenuCoordinador onMenuClick={handleMenuClick} />
                 </div>
                 <div className="administrador__navbar">
-                    <Navbar nombreuser={userData?.username} />
+                    <Navbar />
                     <div className="tablas__informativas">
                         {/* Renderizar la tabla según la opción seleccionada Creacion*/}
-                        {opcionSeleccionada === 'Creacion' && <CreacionRutas idzona={userData?.zona} />}
-                        {opcionSeleccionada === 'Asignacion' && <Asignacion usuarios={usuarios} rutas={sectores} />}
+                        {opcionSeleccionada === 'Creacion' && <CreacionRutas/>}
+                        {opcionSeleccionada === 'Asignacion' && <Asignacion />}
                         {opcionSeleccionada === 'Asistencias' && <Asistencias />}
                     </div>
                 </div>

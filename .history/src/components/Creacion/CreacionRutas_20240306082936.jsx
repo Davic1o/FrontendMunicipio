@@ -2,18 +2,23 @@ import React, { useState } from 'react';
 import InputTexto from '../inputs/InputTexto';
 import BotonAceptar from '../botones/BotonAceptar';
 import { FaRegSave, FaMapSigns } from 'react-icons/fa';
-import registerSector from '../../api/SectorApi';
+import SectorApi from '../../api/SectorApi';
 import './creacionRutas.css';
 
 function CreacionRutas({idzona}) {
   const [nombreRuta, setNombreRuta] = useState('');
 
-  const handleGuardarRuta = () => {
+  const handleGuardarRuta = async () => { // Asegúrate de que handleGuardarRuta sea async si estás usando await en la llamada a crearSector
     if (nombreRuta.trim() !== '') {
-      // Llamar a la función registerSector con el nombre de la ruta
-      registerSector(nombreRuta, idzona);
-      setNombreRuta('');
-      alert(`Ruta "${nombreRuta}" guardada`);
+      try {
+        // Llama a la función crearSector de SectorApi pasando los argumentos necesarios
+        await SectorApi().crearSector(nombreRuta, idzona);
+        // Puedes realizar otras acciones aquí si es necesario
+        console.log(`Ruta "${nombreRuta}" guardada`);
+      } catch (error) {
+        console.error('Error al guardar la ruta:', error.message);
+        // Puedes manejar el error de acuerdo a tus necesidades
+      }
     } else {
       console.error('Error: El nombre de la ruta no puede estar vacío');
       // Puedes manejar el error de acuerdo a tus necesidades

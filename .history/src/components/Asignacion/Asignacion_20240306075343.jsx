@@ -8,8 +8,7 @@ import BotonAceptar from '../botones/BotonAceptar';
 function Asignacion({usuarios, rutas}) {
   // Estados para almacenar las selecciones del usuario
 
-  const users = usuarios.map(fila=> fila.username);
-  const rutes = rutas.map(fila=> fila.nombre_Sector);
+  const opciones = usuarios;
   return (
     <>
     <div className="contendor__asignacion">
@@ -20,12 +19,12 @@ function Asignacion({usuarios, rutas}) {
 <div className="seleccion__usuarios">
 
 <label htmlFor="userSelect">Seleccionar Usuario:</label>
-      <Select Icono={<MdOutlineInput />} Options={users}></Select>
+      <Select Icono={<MdOutlineInput />} Options={opciones}></Select>
 
 </div>
 <div className="seleccion__ruta">
       <label htmlFor="routeSelect">Seleccionar Ruta:</label>
-      <Select Icono={<MdOutlineInput />} Options={rutes}></Select>
+      <Select Icono={<MdOutlineInput />} Options={opciones.username}></Select>
 </div>
 <div className="seleccion__aceptar">
       <BotonAceptar Icono={<FaArrowDownWideShort />} NombreBoton='Asignar' />

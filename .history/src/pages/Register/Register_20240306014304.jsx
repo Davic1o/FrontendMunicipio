@@ -7,9 +7,9 @@ import Select from '../../components/selects/Select';
 import logo from '../../images/logoquito.png';
 import './register.css';
 import { FaUser, FaRegMap, FaKey, FaAlignCenter, FaAddressCard } from 'react-icons/fa';
-import registerUser from '../../api/RegisterApi';
+import registerUser from './RegisterApi';
 
-function Register() {
+function RegisterForm() {
   const [zonaSeleccionada, setZonaSeleccionada] = useState('');
   const [valoresCamposTexto, setValoresCamposTexto] = useState({
     username: '',

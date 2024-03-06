@@ -12,8 +12,8 @@ function CreacionRutas({idzona}) {
     if (nombreRuta.trim() !== '') {
       // Llamar a la función registerSector con el nombre de la ruta
       registerSector(nombreRuta, idzona);
-      setNombreRuta('');
-      alert(`Ruta "${nombreRuta}" guardada`);
+      // Puedes realizar otras acciones aquí si es necesario
+      console.log(`Ruta "${nombreRuta}" guardada`);
     } else {
       console.error('Error: El nombre de la ruta no puede estar vacío');
       // Puedes manejar el error de acuerdo a tus necesidades

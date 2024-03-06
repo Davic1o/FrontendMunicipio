@@ -52,7 +52,7 @@ function Coordinador() {
                     <div className="tablas__informativas">
                         {/* Renderizar la tabla según la opción seleccionada Creacion*/}
                         {opcionSeleccionada === 'Creacion' && <CreacionRutas idzona={userData?.zona} />}
-                        {opcionSeleccionada === 'Asignacion' && <Asignacion usuarios={usuarios} rutas={sectores} />}
+                        {opcionSeleccionada === 'Asignacion' && <Asignacion usuarios={usuarios} rutas={usuarios} />}
                         {opcionSeleccionada === 'Asistencias' && <Asistencias />}
                     </div>
                 </div>
