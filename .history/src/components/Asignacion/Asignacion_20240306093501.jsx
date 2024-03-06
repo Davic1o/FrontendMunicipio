@@ -7,28 +7,22 @@ import BotonAceptar from '../botones/BotonAceptar';
 
 function Asignacion({usuarios, rutas}) {
   // Estados para almacenar las selecciones del usuario
-  const [selectedUser, setSelectedUser] = useState('');
-  const [selectedRoute, setSelectedRoute] = useState('');
+  const [selectedUser, setSelectedUser] = useState(null);
+  const [selectedRoute, setSelectedRoute] = useState(null);
 
   const users = usuarios.map((fila) => ({ value: fila._id, label: fila.username }));
   const rutes = rutas.map((fila) => ({ value: fila._id, label: fila.nombre_Sector }));
 
   const handleUserSelect = (selectedOption) => {
-    setSelectedUser(selectedOption.value);
+    setSelectedUser(selectedOption);
   };
 
   const handleRouteSelect = (selectedOption) => {
-    setSelectedRoute(selectedOption.value);
+    setSelectedRoute(selectedOption);
   };
 // ...
 
-const handleAsignarClick = () => {
-  // Aquí puedes usar selectedUser y selectedRoute para realizar acciones según la selección
-  console.log('Usuario seleccionado:', selectedUser);
-  console.log('Ruta seleccionada:', selectedRoute);
 
-  // Puedes realizar otras acciones con los valores seleccionados
-};
 // ...
 
 
@@ -50,7 +44,7 @@ const handleAsignarClick = () => {
       <Select Icono={<MdOutlineInput />} Options={rutes} onSelect={handleRouteSelect} />
 </div>
 <div className="seleccion__aceptar">
-<BotonAceptar Icono={<FaArrowDownWideShort />} NombreBoton='Asignar' onClick={handleAsignarClick} />
+      <BotonAceptar Icono={<FaArrowDownWideShort />} NombreBoton='Asignar' />
 
 </div>
     </div>

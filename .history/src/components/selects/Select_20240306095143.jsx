@@ -3,7 +3,6 @@ import './select.css';
 
 function Select({ Icono, Options, onSelect }) {
   const handleChange = (e) => {
-    const selectedValue = e.target.value;
     const selectedOption = Options.find((option) => option.value === e.target.value);
     console.log('Selected value:', selectedValue);
     console.log('Selected option:', selectedOption);

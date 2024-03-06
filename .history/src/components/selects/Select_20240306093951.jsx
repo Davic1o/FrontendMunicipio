@@ -1,14 +1,10 @@
 import React from 'react';
 import './select.css';
 
-function Select({ Icono, Options, onSelect }) {
+function Select({ Icono, Options, onChange }) {
   const handleChange = (e) => {
-    const selectedValue = e.target.value;
-    const selectedOption = Options.find((option) => option.value === e.target.value);
-    console.log('Selected value:', selectedValue);
-    console.log('Selected option:', selectedOption);
-    if (onSelect) {
-      onSelect(selectedOption);
+    if (onChange) {
+      onChange(e);
     }
   };
 
@@ -24,7 +20,7 @@ function Select({ Icono, Options, onSelect }) {
               </option>
               {Options.map((option) => (
                 <option key={option.value} value={option.label}>
-                  {option.label}
+                  {option}
                 </option>
               ))}
             </select>

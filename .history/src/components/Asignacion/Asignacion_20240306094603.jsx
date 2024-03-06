@@ -14,11 +14,11 @@ function Asignacion({usuarios, rutas}) {
   const rutes = rutas.map((fila) => ({ value: fila._id, label: fila.nombre_Sector }));
 
   const handleUserSelect = (selectedOption) => {
-    setSelectedUser(selectedOption.value);
+    setSelectedUser(selectedOption);
   };
 
   const handleRouteSelect = (selectedOption) => {
-    setSelectedRoute(selectedOption.value);
+    setSelectedRoute(selectedOption);
   };
 // ...
 

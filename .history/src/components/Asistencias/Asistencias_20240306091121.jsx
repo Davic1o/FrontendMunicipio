@@ -1,5 +1,5 @@
 import React from 'react';
-import TablaAsistencia from '../Tabla/TablaAsistencia';
+import TablaOpcion from '../Tabla/TablaOpcion';
 
 function Asistencias({datos}) {
 
@@ -9,7 +9,7 @@ function Asistencias({datos}) {
 
   return (
     <>
-      <TablaAsistencia datos={datosEjemplo} />
+      <TablaOpcion datos={datosEjemplo} />
     </>
   );
 }
