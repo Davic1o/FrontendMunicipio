@@ -1,0 +1,9 @@
+.contenedor__administrador{
+    background-image:  url('../../images/fondo_informacion.jpg');
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    z-index: 0;
+    
+}

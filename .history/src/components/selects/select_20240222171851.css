@@ -1,0 +1,44 @@
+.contenedor__select {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 2.5vh;
+    border-radius: 1vh;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .inf__select {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .icono__select {
+    color: var(--color-primario);
+    margin-right: 1vh;
+  }
+  
+  .campo__select {
+    flex: 1;
+  }
+  
+  .select {
+    width: 30vh;
+    background-color: transparent;
+    border: none;
+    font-size: 1.8vh;
+    color: var(--color-primario);
+    border: 2px solid var(--color-primario);
+    border-radius: 0.5vh;
+  }
+  .select:focus{
+    outline: none;
+  }
+  
+  .select:not(:focus){
+    background-color: transparent;
+  }
+  /* Puedes agregar estilos adicionales según tus necesidades */
+  

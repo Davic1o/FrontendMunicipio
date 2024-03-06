@@ -1,0 +1,22 @@
+.contendor__asignacion{
+    width: 20vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2vh;
+    background: linear-gradient(to right, rgba(253, 0, 0, 0.288) 1%, rgba(16, 0, 235, 0.171));
+}
+.titulo__seleccion{
+    color: white;
+    padding: 10vh 10vh;
+}
+.seleccion__usuarios{
+    margin-left: 5vh;
+    margin-top: 5vh;
+    
+}
+.seleccion__aceptar{
+    margin: 100px;
+}

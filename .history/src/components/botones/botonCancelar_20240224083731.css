@@ -1,0 +1,37 @@
+.contenedorBotonCancelar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    width: 10vw;
+    font-size: 2.5vh;
+    border-radius: 3vh;
+    cursor: pointer;
+    background-color: var(--color-primario);
+}
+.inf__botonCancelar{
+    display: flex;
+    color: var(--color-blanco);
+}
+
+.contenedorBotonCancelar:hover .inf__botonCancelar .icono__botonCancelar{
+    animation: spiner 1 0.5s linear;
+}
+.contenedorBotonCancelar:hover {
+    background-color: var(--color-secundario);
+}
+
+.icono__botonCancelar{
+    margin-right: 1vh;
+    font-weight: bold
+}
+
+@keyframes spiner {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

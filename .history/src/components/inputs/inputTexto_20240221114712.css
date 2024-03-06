@@ -1,0 +1,9 @@
+.contenedor__inputTexto{
+    border: 2px solid;
+    height: 5vh;
+    width: 10vw;
+    font-size: 2.5vh;
+    border-radius: 3vh;
+    cursor: pointer;
+    background-color: var(--color-primario);
+}

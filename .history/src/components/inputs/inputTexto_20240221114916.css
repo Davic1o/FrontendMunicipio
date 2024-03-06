@@ -1,0 +1,13 @@
+.contenedor__inputTexto{
+    border: 2px solid;
+    height: 5vh;
+    width: 10vw;
+    font-size: 2.5vh;
+    border-radius: 3vh;
+    background-color: var(--color-primario);
+}
+
+.inf__inputTexto{
+    display: flex;
+    color: var(--color-blanco);
+}

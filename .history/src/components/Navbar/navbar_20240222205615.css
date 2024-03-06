@@ -1,0 +1,15 @@
+.contendor__navbar{
+    display: flex;
+    border: 2px solid;
+    width: 100%;
+}
+.informacion__navbar{
+    display: flex;
+    align-items: center;
+}
+.imagen__navbar{
+    display: flex;
+}
+.imagen__escudo{
+    width: 3vw;
+}

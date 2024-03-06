@@ -1,0 +1,13 @@
+.contenedorBotonAcceso{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    width: 10vw;
+    font-size: 2.5vh;
+    border-radius: 2vh;
+    cursor: pointer;
+    background-color: var(--color-primario);
+}
+
+

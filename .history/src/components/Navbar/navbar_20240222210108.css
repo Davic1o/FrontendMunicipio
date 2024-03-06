@@ -1,0 +1,18 @@
+.contendor__navbar{
+    display: flex;
+    justify-content: space-between; /* Esto distribuirá los elementos a ambos lados del contenedor */
+}
+.informacion__navbar{
+    display: flex;
+
+}
+.imagen__navbar{
+    display: flex;
+}
+.imagen__escudo{
+    width: 3vw;
+}
+.menu__navbar{
+    display: flex;
+justify-content: flex-end;
+}

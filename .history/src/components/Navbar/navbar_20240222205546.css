@@ -1,0 +1,16 @@
+.contendor__navbar{
+    display: flex;
+    border: 2px solid;
+    width: 70vw;
+}
+.informacion__navbar{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+.imagen__navbar{
+    display: flex;
+}
+.imagen__escudo{
+    width: 3vw;
+}

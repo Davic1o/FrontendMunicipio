@@ -1,0 +1,17 @@
+.contendor__creacion{
+    width: 20vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2vh;
+    background: linear-gradient(to right, rgba(253, 0, 0, 0.288) 1%, rgba(16, 0, 235, 0.171));
+  
+}
+.titulo__creacion{
+    color: white;
+}
+.boton__creacion{
+margin-top: 10vh;
+}

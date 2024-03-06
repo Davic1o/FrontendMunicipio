@@ -1,0 +1,28 @@
+.contendor__navbar{
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to right, rgba(253, 0, 0, 0.288) 1%, rgba(16, 0, 235, 0.171));
+
+
+    
+}
+.informacion__navbar{
+    display: flex;
+    align-items: center; 
+
+}
+.imagen__navbar{
+    display: flex;
+}
+.imagen__escudo{
+    width: 3vw;
+}
+.menu__navbar{
+    display: flex;
+justify-content: flex-end;
+font-size: 3vh;
+cursor: pointer;
+}
+.icono__user{
+    width: 3vw;
+}

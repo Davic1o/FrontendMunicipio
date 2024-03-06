@@ -1,0 +1,56 @@
+.contenedor__inputTexto{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5vh;
+    border-radius: 1vh;
+    cursor: pointer;
+  }
+  
+  .inf__inputTexto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icono__inputTexto{
+    color: var(--color-primario);
+    margin-right: 1vh;
+}
+
+.inputTexto{
+    font-size: 1.8vh;
+    color: var(--color-primario);
+    transition: border 0.3s ease;
+
+}
+.inputTexto::placeholder{
+    font-size: 1.8vh;
+    color: var(--color-primario);
+    text-align: center;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.inputTexto:focus::placeholder {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+.inputTexto:focus {
+    font-size: 1.8vh;
+    color: var(--color-primario);
+    font-weight:bold;
+    border-bottom: 3px solid var(--color-primario);
+ animation: borderAnimation 3s infinite alternate;
+  }
+
+  @keyframes borderAnimation {
+    from {
+      border-color: rgb(255, 255, 255); /* Cambia el color del borde al inicio de la animación */
+    }
+    to {
+      border-color: rgb(255, 0, 0); /* Cambia el color del borde al final de la animación */
+    }
+  }
+  
