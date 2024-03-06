@@ -18,7 +18,7 @@ function Select({ Icono, Options, onChange }) {
               <option value="" disabled hidden>
                 Seleccione una opción
               </option>
-              {Options.map(( option, key) => (
+              {Options.map((key, option) => (
                 <option key={key} value={option}>
                   {option}
                 </option>

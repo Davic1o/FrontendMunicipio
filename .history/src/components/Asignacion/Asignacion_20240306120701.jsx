@@ -9,7 +9,7 @@ function Asignacion({usuarios, rutas}) {
   // Estados para almacenar las selecciones del usuario
 
   const users = usuarios.map(fila=> fila.username);
-  const rutes = rutas.map(fila=> fila.nombre_Sector);
+  const rutes = rutas.map(fila=> fila.username);
   return (
     <>
     <div className="contendor__asignacion">
